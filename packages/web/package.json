@@ -1,5 +1,5 @@
 {
-	"name": "@tcher/web",
+	"name": "@monorepo/web",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
