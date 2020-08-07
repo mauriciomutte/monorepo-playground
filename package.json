@@ -2,12 +2,16 @@
 	"name": "monorepo",
 	"version": "1.0.0",
 	"main": "index.js",
+	"author": "mauriciomutte <litiobr@gmail.com>",
+	"license": "MIT",
 	"private": true,
 	"workspaces": {
 		"packages": [
 			"packages/*"
 		]
 	},
-	"author": "mauriciomutte <litiobr@gmail.com>",
-	"license": "MIT"
+	"scripts": {
+		"start:web": "yarn workspace @monorepo/web start",
+		"start:expo-app": "yarn workspace @monorepo/expo-app start"
+	}
 }
