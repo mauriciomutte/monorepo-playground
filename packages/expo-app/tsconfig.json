@@ -36,7 +36,5 @@
 		},
 		"removeComments": true,
 		"typeRoots": ["node_modules/@types", "./src/@types"]
-	},
-	"include": ["src"],
-	"exclude": ["node_modules", "./node_modules", "./node_modules/*"]
+	}
 }
