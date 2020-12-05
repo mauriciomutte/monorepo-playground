@@ -6,7 +6,7 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<Text>Hello Monorepo!</Text>
-			<StatusBar style='auto' />
+			<StatusBar style="auto" />
 		</View>
 	);
 }

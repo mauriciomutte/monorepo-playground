@@ -6,7 +6,7 @@ import { activateKeepAwake } from 'expo-keep-awake';
 import App from '../App';
 
 if (__DEV__) {
-  activateKeepAwake();
+	activateKeepAwake();
 }
 
 registerRootComponent(App);

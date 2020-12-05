@@ -21,7 +21,7 @@
 	},
 	"lint-staged": {
 		"**/*.{js,jsx,ts,tsx}": [
-			"yarn prettier --write '**/*.{js,jsx,ts,tsx}'"
+			"yarn prettier --write"
 		],
 		"package.json": [
 			"yarn prettier --write",
