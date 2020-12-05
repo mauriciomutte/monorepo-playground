@@ -1,17 +1,37 @@
 {
 	"name": "monorepo",
 	"version": "1.0.0",
-	"main": "index.js",
-	"author": "mauriciomutte <litiobr@gmail.com>",
-	"license": "MIT",
 	"private": true,
+	"license": "MIT",
+	"author": "mauriciomutte <litiobr@gmail.com>",
+	"main": "index.js",
 	"workspaces": {
 		"packages": [
 			"packages/*"
 		]
 	},
 	"scripts": {
-		"start:web": "yarn workspace @monorepo/web start",
-		"start:expo-app": "yarn workspace @monorepo/expo-app start"
+		"start:expo-app": "yarn workspace @monorepo/expo-app start",
+		"start:web": "yarn workspace @monorepo/web start"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"yarn prettier --write"
+		],
+		"package.json": [
+			"yarn prettier --write",
+			"yarn sort-package-json \"package.json\" \"packages/*/package.json\""
+		]
+	},
+	"devDependencies": {
+		"husky": "^4.3.4",
+		"lint-staged": "^10.5.3",
+		"prettier": "^2.2.1",
+		"sort-package-json": "^1.48.0"
 	}
 }
